@@ -1,0 +1,6 @@
+Feeling/seeming tense/nervous/unable to relax,Worrying/seems to worry about things that might happen in the future,"Having a sense of dread, or fearing the worst",Losing interest in daily activities,Trouble concentrating on everyday things such as watching television,Neglected appearance,Have trouble concentrating in class,Withdraw from friends or activities,Talk about suicide or death,Hinting that they might not be around anymore,Talking about being a burden to others,Acting anxious or agitated; behaving recklessly
+i'm not sure,true,i'm not sure,i'm not sure,i'm not sure,true,false,i'm not sure,true,i'm not sure,false,true,true
+true,i'm not sure,true,true,false,true,true,i'm not sure,false,i'm not sure,true,i'm not sure,true
+false,true,i'm not sure,i'm not sure,i'm not sure,true,true,i'm not sure,true,false,false,i'm not sure,true
+true,true,true,false,true,false,true,true,false,false,i'm not sure,true,true
+false,i'm not sure,false,false,true,false,false,false,false,true,true,false,true
