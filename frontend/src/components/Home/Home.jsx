@@ -109,6 +109,7 @@ const HelpAFriendButton = styled.button`
   font-weight: bold;
   font-size: 32px;
   border: none;
+  box-shadow: 0 4px 4px grey;
   border-radius: 8px;
   cursor: pointer;
 
