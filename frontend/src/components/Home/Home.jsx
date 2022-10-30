@@ -108,11 +108,12 @@ const HelpAFriendButton = styled.button`
   color: ${colors.lightYellow};
   font-weight: bold;
   font-size: 32px;
+  border: none;
   border-radius: 8px;
   cursor: pointer;
 
   :hover {
-    background-color: transparent;
+    background-color: ${colors.lightYellow};
     color: ${colors.purple};
   }
 `;
