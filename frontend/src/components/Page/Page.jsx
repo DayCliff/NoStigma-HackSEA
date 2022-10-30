@@ -6,7 +6,12 @@ function Page(props) {
   return (
     <Container>
       <Header />
-      <Main>{props.content}</Main>
+      <Main>
+        <MainContentBackground>
+          <img src="/images/heart-icon.png" alt="heart" />
+        </MainContentBackground>
+        {props.content}
+      </Main>
       <Footer />
     </Container>
   );
@@ -21,5 +26,26 @@ const Container = styled.div`
 `;
 
 const Main = styled.main`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   flex-grow: 1;
+`;
+
+const MainContentBackground = styled.div`
+  position: absolute;
+  inset: 0;
+  max-width: 100vw;
+  height: 100%;
+  opacity: 0.15;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+
+  img {
+    height: 100%;
+    max-height: 100vh;
+  }
 `;

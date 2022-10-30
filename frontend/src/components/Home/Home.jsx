@@ -13,9 +13,6 @@ function Home(props) {
           <IntroParagraph>{intro.text}</IntroParagraph>
         </IntroContent>
         <MainContent>
-          <MainContentBackground>
-            <img src="/images/heart-icon.png" alt="heart" />
-          </MainContentBackground>
           <DetailInfoBoxContainer>
             {details.map((d) =>
               <DetailInfoBox icon={d.icon} title={d.title} text={d.text} />
@@ -67,22 +64,6 @@ const MainContent = styled.div`
   align-items: center;
   row-gap: 16px;
   padding: 16px 0;
-`;
-
-const MainContentBackground = styled.div`
-  position: absolute;
-  inset: 0;
-  max-width: 100vw;
-  height: 100%;
-  opacity: 0.25;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: -1;
-
-  img {
-    height: 100%;
-  }
 `;
 
 const DetailInfoBoxContainer = styled.div`
