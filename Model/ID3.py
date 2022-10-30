@@ -104,6 +104,7 @@ def ID3(d, D, target_value, feature=None, previous_value=None) -> dict:
     @param previous_value: string(optional)
     @return: dictionary
     """
+    print(feature)
     tree = {}
 
     # remove the target value, will only be done before recursion begins
@@ -217,19 +218,22 @@ def testing_testing(fld, file, td_file_path, target_feature):
 # dataset = read_file("C:\\Users\\Dayna\\Desktop\\Fall2022\\CS460\\Assignment2\\data\\emails.csv")
 #dataset = read_file("C:\\Users\\Dayna\\Desktop\\Fall2022\\CS460\\Assignment2\\data\\census_training.csv")
 
-folder_name = "model"
-file_name = "censusModel"
-pp_file_name = "post_pruning_model"
-tf = "high_income"
+dataset = read_file("C:\\Users\\dayna\\Desktop\\Github\\NoStigma-HackSEA\\data\\trainingData.txt")
+model = ID3(list(dataset.columns), dataset, "result")
 
-print("=================Starting Test Pre-Pruning=================")
-testing_testing(folder_name, file_name,
-                "C:\\Users\\Dayna\\Desktop\\Fall2022\\CS460\\Assignment2\\data\\census_training_test.csv", tf)
-print("=================End Test=================")
-print("=================Starting Test Post-Pruning=================")
-testing_testing(folder_name, pp_file_name,
-                "C:\\Users\\Dayna\\Desktop\\Fall2022\\CS460\\Assignment2\\data\\census_training_test.csv", tf)
-print("=================End Test=================")
+# folder_name = "model"
+# file_name = "censusModel"
+# pp_file_name = "post_pruning_model"
+# tf = "high_income"
+#
+# print("=================Starting Test Pre-Pruning=================")
+# testing_testing(folder_name, file_name,
+#                 "C:\\Users\\Dayna\\Desktop\\Fall2022\\CS460\\Assignment2\\data\\census_training_test.csv", tf)
+# print("=================End Test=================")
+# print("=================Starting Test Post-Pruning=================")
+# testing_testing(folder_name, pp_file_name,
+#                 "C:\\Users\\Dayna\\Desktop\\Fall2022\\CS460\\Assignment2\\data\\census_training_test.csv", tf)
+# print("=================End Test=================")
 
 # if not os.path.exists(folder_name):
 #     os.makedirs(folder_name)
