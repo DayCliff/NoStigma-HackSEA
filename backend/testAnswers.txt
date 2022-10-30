@@ -1,0 +1,14 @@
+{
+  "Feeling/seeming tense/nervous/unable to relax": "true",
+  "Worrying/seems to worry about things that might happen in the future": "true",
+  "Having a sense of dread, or fearing the worst": "true",
+  "Losing interest in daily activities": "true",
+  "Trouble concentrating on everyday things such as watching television": "false",
+  "Neglected appearance": "false",
+  "Have trouble concentrating in class": "false",
+  "Withdraw from friends or activities": "false",
+  "Talk about suicide or death": "false",
+  "Hinting that they might not be around anymore": "true",
+  "Talking about being a burden to others": "false",
+  "Acting anxious or agitated; behaving recklessly": "false"
+}
