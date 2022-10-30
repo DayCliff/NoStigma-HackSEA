@@ -5,6 +5,7 @@ import Questionnaire from './components/Questionnaire/Questionnaire';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './components/Home/Home';
+import Page from './components/Page/Page';
 
 export const headerLinks = [
   {
@@ -22,9 +23,9 @@ export const headerLinks = [
     title: 'Contact',
     element: <Home />
   }
-]
+];
 
-const router = createBrowserRouter([
+const routes = [
   {
     path: '/',
     title: 'Home',
@@ -36,12 +37,22 @@ const router = createBrowserRouter([
     element: <Questionnaire />
   },
   ...headerLinks
-]);
+];
+
+const router = createBrowserRouter(
+  routes.map((r) => {
+    return {
+      path: r.path,
+      title: r.title,
+      element: <Page content={r.element} />
+    }
+  })
+);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router ={router} />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 

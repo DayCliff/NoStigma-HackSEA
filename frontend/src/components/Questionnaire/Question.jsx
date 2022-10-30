@@ -15,7 +15,7 @@ function Question(props) {
                 name={props.text}
                 value={r}
               />
-              <label for={name}>{r}</label>
+              <label htmlFor={name}>{r}</label>
             </div>
           )
         })}

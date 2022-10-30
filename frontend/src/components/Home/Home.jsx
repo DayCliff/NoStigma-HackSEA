@@ -1,14 +1,10 @@
 import styled from '@emotion/styled';
-import Footer from '../Footer/Footer';
-import Header from '../Header/Header';
 import { LinkButton } from '../LinkButton';
 
 function Home() {
   return (
     <Container>
-      <Header />
       <LinkButton to="/questionnaire" text="Report" />
-      <Footer />
     </Container>
   );
 }
@@ -20,6 +16,6 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100%;
   width: 100vw;
 `;
