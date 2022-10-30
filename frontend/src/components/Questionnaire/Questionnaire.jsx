@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import Question from "./Question";
 import questions from '../../fake/questions';
-import { LinkButton } from "../LinkButton";
+import { colors } from '../../style.js';
 
 function Questionnaire() {
   const submitResponses = () => {};
@@ -14,7 +14,7 @@ function Questionnaire() {
           <Question key={q.text} text={q.text} responses={q.responses} />
         )}
       </QuestionList>
-      <LinkButton to="/results" text="Submit" onClick={submitResponses}/>
+      <Button type="button" onClick={submitResponses}>Submit</Button>
     </Container>
   );
 }
@@ -34,4 +34,23 @@ const QuestionList = styled.form`
   flex-direction: column;
   row-gap: 4px;
   padding: 0;
+`;
+
+const Button = styled.button`
+  width: fit-content;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background-color: ${colors.purple};
+  color: ${colors.lightYellow};
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  box-shadow: 0 4px 4px gray;
+
+  :hover {
+    background-color: ${colors.lightYellow};
+    color: ${colors.purple};
+  }
 `;

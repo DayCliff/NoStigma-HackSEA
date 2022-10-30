@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { colors } from '../../style.js';
 
 function Question(props) {
   return (
@@ -32,10 +33,11 @@ const Container = styled.div`
   column-gap: 32px;
   padding: 16px;
   border-radius: 8px;
+  background-color: ${colors.lightBlue50};
+  font-size: 16px;
 `;
 
 const Text = styled.div`
-  font-weight: bold;
   flex-grow: 1;
 `;
 
