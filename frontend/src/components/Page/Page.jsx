@@ -8,7 +8,7 @@ function Page(props) {
       <Header />
       <Main>
         <MainContentBackground>
-          <img src="/images/heart-icon.png" alt="heart" />
+          <img src={props.background} alt="heart" />
         </MainContentBackground>
         {props.content}
       </Main>

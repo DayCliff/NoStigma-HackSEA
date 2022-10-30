@@ -25,7 +25,12 @@ function Questionnaire() {
     if (!validateForm())
       window.alert('Please respond to all questions.');
 
-    else {
+    else if (Object.values(responses).filter((r) => r === 'true').length === 0) {
+      // all responses were false
+      navigate('/results/normal');
+
+    } else {
+
       const result = await fetch('/evaluate', {
         method: 'post',
         headers: { 'content-type': 'application/json'},
