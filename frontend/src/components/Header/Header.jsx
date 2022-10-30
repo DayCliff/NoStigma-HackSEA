@@ -22,7 +22,7 @@ function Header(props) {
           <Logo src="/images/Logo.png" alt="logo" />
         </Link>
         <Navbar>
-          <HamburgerMenu width={32} />
+          <HamburgerMenu width={24} />
           <LinkContainer>
             <Links>
               {headerLinks.map((link) => 
@@ -39,7 +39,10 @@ function Header(props) {
 
 export default Header;
 
-const HeaderContainer = styled.header``;
+const HeaderContainer = styled.header`
+  width: 100%;
+  z-index: 100;
+`;
 
 const Container = styled.div`
   position: fixed;
@@ -55,7 +58,7 @@ const Logo = styled.img`
 
 const Navbar = styled.nav`
   background-color: ${colors.lightBlue50};
-  padding: 16px;
+  padding: 16px 10% 16px 16px;
   display: flex;
   align-items: center;
 `;
@@ -64,7 +67,6 @@ const LinkContainer = styled.div`
   display: flex;
   flex-grow: 1;
   justify-content: end;
-  padding-right: 16px;
 `;
 
 const Links = styled.div`
