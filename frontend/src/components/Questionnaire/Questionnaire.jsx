@@ -2,8 +2,10 @@ import styled from "@emotion/styled";
 import Question from "./Question";
 import questions from '../../fake/questions';
 import { colors } from '../../style.js';
+import { useNavigate } from 'react-router-dom';
 
 function Questionnaire() {
+  const navigate = useNavigate();
   const formId = 'question-form';
 
   const submitResponses = async () => {
@@ -30,7 +32,7 @@ function Questionnaire() {
         body: JSON.stringify(responses)
       }).then((r) => r.json());
 
-      window.alert(result.result);
+      navigate(`/results/${result.category}`);
     }
   };
 

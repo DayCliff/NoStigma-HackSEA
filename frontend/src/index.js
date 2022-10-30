@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './components/Home/Home';
 import Page from './components/Page/Page';
+import Results from './components/Results/Results';
 
 export const headerLinks = [
   {
@@ -35,6 +36,21 @@ const routes = [
     path: '/questionnaire',
     title: 'Questionnaire',
     element: <Questionnaire />
+  },
+  {
+    path: '/results/anxious',
+    title: 'Results',
+    element: <Results category="anxious" />
+  },
+  {
+    path: '/results/depressed',
+    title: 'Results',
+    element: <Results category="depressed" />
+  },
+  {
+    path: '/results/suicidal',
+    title: 'Results',
+    element: <Results category="suicidal" />
   },
   ...headerLinks
 ];

@@ -18,5 +18,5 @@ def evaluate_responses():
         print('Data is not json')
 
     return jsonify({
-        'result': f'You\'re {category}!'
+        'category': category
     })
