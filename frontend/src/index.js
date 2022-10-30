@@ -1,20 +1,41 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './components/App/App';
 import Questionnaire from './components/Questionnaire/Questionnaire';
 import reportWebVitals from './reportWebVitals';
-import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Home from './components/Home/Home';
+
+export const headerLinks = [
+  {
+    path: '/about',
+    title: 'About',
+    element: <Home />
+  },
+  {
+    path: '/resources',
+    title: 'Resources',
+    element: <Home />
+  },
+  {
+    path: '/contact',
+    title: 'Contact',
+    element: <Home />
+  }
+]
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />
+    title: 'Home',
+    element: <Home />
   },
   {
     path: '/questionnaire',
+    title: 'Questionnaire',
     element: <Questionnaire />
-  }
+  },
+  ...headerLinks
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

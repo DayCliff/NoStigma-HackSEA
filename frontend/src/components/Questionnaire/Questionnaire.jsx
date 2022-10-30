@@ -1,10 +1,9 @@
 import styled from "@emotion/styled";
 import Question from "./Question";
-import fakeQuestions from './fakeQuestions';
+import questions from '../../fake/questions';
 import { LinkButton } from "../LinkButton";
 
 function Questionnaire() {
-  const questions = fakeQuestions;
   const submitResponses = () => {};
 
   return (
