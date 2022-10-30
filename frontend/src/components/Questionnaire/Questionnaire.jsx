@@ -4,17 +4,49 @@ import questions from '../../fake/questions';
 import { colors } from '../../style.js';
 
 function Questionnaire() {
-  const submitResponses = () => {};
+  const formId = 'question-form';
+
+  const submitResponses = async () => {
+    const responses = {};
+
+    const validateForm = () => {
+      const inputs = document.forms[formId].elements;
+
+      for (let i = 0; i < inputs.length; i++) {
+        if (inputs[i].type === 'radio' && inputs[i].checked)
+          responses[inputs[i].name] = inputs[i].value;
+      }
+  
+      return Object.keys(responses).length === questions.length;
+    };
+
+    if (!validateForm())
+      window.alert('Please respond to all questions.');
+
+    else {
+      const result = await fetch('/evaluate', {
+        method: 'post',
+        headers: { 'content-type': 'application/json'},
+        body: JSON.stringify(responses)
+      }).then((r) => r.json());
+
+      window.alert(result.result);
+    }
+  };
 
   return (
     <Container>
       <h1>Questionnaire</h1>
-      <QuestionList>
+      <QuestionList id={formId}>
         {questions.map((q) =>
-          <Question key={q.text} text={q.text} responses={q.responses} />
+          <Question
+            key={q.text}
+            text={q.text}
+            responses={q.responses}
+          />
         )}
+        <Button type="button" onClick={submitResponses}>Submit</Button>
       </QuestionList>
-      <Button type="button" onClick={submitResponses}>Submit</Button>
     </Container>
   );
 }
@@ -34,6 +66,7 @@ const QuestionList = styled.form`
   flex-direction: column;
   row-gap: 4px;
   padding: 0;
+  align-items: center;
 `;
 
 const Button = styled.button`

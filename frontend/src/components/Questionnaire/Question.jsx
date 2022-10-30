@@ -29,6 +29,7 @@ export default Question;
 
 const Container = styled.div`
   border: 1px solid gray;
+  width: 100%;
   display: flex;
   column-gap: 32px;
   padding: 16px;

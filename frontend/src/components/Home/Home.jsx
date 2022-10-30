@@ -15,7 +15,12 @@ function Home(props) {
         <MainContent>
           <DetailInfoBoxContainer>
             {details.map((d) =>
-              <DetailInfoBox icon={d.icon} title={d.title} text={d.text} />
+              <DetailInfoBox
+                key={d.title}
+                icon={d.icon}
+                title={d.title}
+                text={d.text}
+              />
             )}
           </DetailInfoBoxContainer>
           <Link to="/questionnaire">
