@@ -1,9 +1,11 @@
 import styled from "@emotion/styled";
 import Question from "./Question";
-import questions from '../../fake/questions';
+import { questions } from './questions';
 import { colors } from '../../style.js';
+import { useNavigate } from 'react-router-dom';
 
 function Questionnaire() {
+  const navigate = useNavigate();
   const formId = 'question-form';
 
   const submitResponses = async () => {
@@ -23,14 +25,20 @@ function Questionnaire() {
     if (!validateForm())
       window.alert('Please respond to all questions.');
 
-    else {
+    else if (Object.values(responses).filter((r) => r === 'true').length === 0) {
+      // all responses were false
+      navigate('/results/normal');
+
+    } else {
+
+      // run the machine learning algorithm
       const result = await fetch('/evaluate', {
         method: 'post',
         headers: { 'content-type': 'application/json'},
         body: JSON.stringify(responses)
       }).then((r) => r.json());
 
-      window.alert(result.result);
+      navigate(`/results/${result.category}`);
     }
   };
 
@@ -81,6 +89,7 @@ const Button = styled.button`
   text-decoration: none;
   border: none;
   box-shadow: 0 4px 4px gray;
+  margin-top: 12px;
 
   :hover {
     background-color: ${colors.lightYellow};

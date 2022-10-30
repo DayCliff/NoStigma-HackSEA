@@ -24,7 +24,7 @@ function Home(props) {
             )}
           </DetailInfoBoxContainer>
           <Link to="/questionnaire">
-            <HelpAFriendButton>HELP A FRIEND</HelpAFriendButton>
+            <GoToScreeningButton>GO TO SCREENING</GoToScreeningButton>
           </Link>
         </MainContent>
       </Content>
@@ -87,13 +87,13 @@ const DetailInfoBoxContainer = styled.div`
   }
 `;
 
-const HelpAFriendButton = styled.button`
+const GoToScreeningButton = styled.button`
   width: fit-content;
   padding: 8px 16px;
   background-color: ${colors.purple};
   color: ${colors.lightYellow};
   font-weight: bold;
-  font-size: 32px;
+  font-size: 24px;
   border: none;
   box-shadow: 0 4px 4px grey;
   border-radius: 8px;

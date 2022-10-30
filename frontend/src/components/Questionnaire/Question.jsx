@@ -16,7 +16,7 @@ function Question(props) {
                 name={props.text}
                 value={r}
               />
-              <label htmlFor={name}>{r}</label>
+              <label htmlFor={name}><Response>{r}</Response></label>
             </div>
           )
         })}
@@ -31,7 +31,6 @@ const Container = styled.div`
   border: 1px solid gray;
   width: 100%;
   display: flex;
-  column-gap: 32px;
   padding: 16px;
   border-radius: 8px;
   background-color: ${colors.lightBlue50};
@@ -45,4 +44,8 @@ const Text = styled.div`
 const Responses = styled.div`
   display: flex;
   flex-direction: column;
+`;
+
+const Response = styled.span`
+  text-transform: capitalize;
 `;
