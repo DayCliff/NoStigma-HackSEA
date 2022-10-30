@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import Question from "./Question";
-import questions from '../../fake/questions';
+import { questions } from './questions';
 import { colors } from '../../style.js';
 import { useNavigate } from 'react-router-dom';
 
