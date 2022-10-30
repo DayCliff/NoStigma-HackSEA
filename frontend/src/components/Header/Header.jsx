@@ -14,7 +14,7 @@ function Header(props) {
         <LinkContainer>
           <Links>
             {headerLinks.map((link) => 
-              <StyledLink to={link.to}>{link.title}</StyledLink>
+              <StyledLink key={link.title} to={link.to}>{link.title}</StyledLink>
             )}
           </Links>
         </LinkContainer>
