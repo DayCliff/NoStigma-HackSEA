@@ -31,6 +31,7 @@ function Questionnaire() {
 
     } else {
 
+      // run the machine learning algorithm
       const result = await fetch('/evaluate', {
         method: 'post',
         headers: { 'content-type': 'application/json'},
@@ -88,6 +89,7 @@ const Button = styled.button`
   text-decoration: none;
   border: none;
   box-shadow: 0 4px 4px gray;
+  margin-top: 12px;
 
   :hover {
     background-color: ${colors.lightYellow};
