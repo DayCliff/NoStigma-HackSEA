@@ -23,6 +23,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   height: 100vh;
+  overflow-x: hidden;
 `;
 
 const Main = styled.main`
