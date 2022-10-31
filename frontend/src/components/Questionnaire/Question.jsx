@@ -31,6 +31,8 @@ const Container = styled.div`
   border: 1px solid gray;
   width: 100%;
   display: flex;
+  flex-direction: column;
+  row-gap: 16px;
   padding: 16px;
   border-radius: 8px;
   background-color: ${colors.lightBlue50};
@@ -38,12 +40,12 @@ const Container = styled.div`
 `;
 
 const Text = styled.div`
-  flex-grow: 1;
+  font-weight: bold;
 `;
 
 const Responses = styled.div`
   display: flex;
-  flex-direction: column;
+  column-gap: 24px;
 `;
 
 const Response = styled.span`

@@ -72,7 +72,7 @@ const Container = styled.div`
 const QuestionList = styled.form`
   display: flex;
   flex-direction: column;
-  row-gap: 4px;
+  row-gap: 6px;
   padding: 0;
   align-items: center;
 `;
